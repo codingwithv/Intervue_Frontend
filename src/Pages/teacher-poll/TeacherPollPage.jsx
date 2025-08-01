@@ -7,7 +7,7 @@ import eyeIcon from "../../assets/eye.svg";
 let apiUrl =
   import.meta.env.VITE_NODE_ENV === "production"
     ? import.meta.env.VITE_API_BASE_URL
-    : "http://localhost:3000";
+    : "https://intervue-poll-backend.onrender.com";
 const socket = io(apiUrl);
 
 const TeacherPollPage = () => {
@@ -51,7 +51,7 @@ const TeacherPollPage = () => {
         className="btn rounded-pill ask-question poll-history px-4 m-2"
         onClick={handleViewPollHistory}
       >
-        <img src={eyeIcon} alt=""/>
+        <img src={eyeIcon} alt="" />
         View Poll history
       </button>
       <br />
